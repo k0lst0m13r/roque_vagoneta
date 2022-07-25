@@ -8,4 +8,4 @@ def tienda(request):
     return render(request,'roque_vago_app/tienda.html')
 
 def contacto(request):
-    return render(request,'roque_vago_app/contacto.html')
+    return render(request, 'roque_vago_app/contacto.html')
