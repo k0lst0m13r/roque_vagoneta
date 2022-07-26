@@ -19,7 +19,7 @@ from roque_vago_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", views.home, name="home"),
+    path("", views.index, name="index"),
     path("tienda", views.tienda, name="tienda"),
     path("contacto", views.contacto, name="contacto"),
 ]

@@ -1,8 +1,8 @@
 from django.shortcuts import render, HttpResponse
 
 # Create your views here.
-def home(request):
-    return render(request, 'roque_vago_app/home.html')
+def index(request):
+    return render(request, 'roque_vago_app/index.html')
 
 def tienda(request):
     return render(request,'roque_vago_app/tienda.html')
