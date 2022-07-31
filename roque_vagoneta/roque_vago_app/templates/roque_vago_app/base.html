@@ -52,6 +52,15 @@
         <li class="nav-item {% if request.path == '/contacto' %}active{% endif %}">
           <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
         </li>
+
+        {% if user.is_authenticated %}
+           {% if user.username == "admin" %} <!--cambiar superuser antes de desplegar-->
+        <li class="nav-item {% if request.path == '/admin' %}active{% endif %}">
+          <a class="nav-link" href="{% url 'admin:index' %}">Administración</a>
+        </li>
+            {% endif %}
+          {% endif %}
+
       </ul>
       <form class="form-inline mt-2 mt-md-0">
         <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
