@@ -5,15 +5,25 @@
 
 {% block content %}
 
+<main role="main">
 
   <div class="row featurette">
     <div class="col-md-12">
       <h2 class="featurette-heading" style="text-align:center;">TIENDA</h2>
       <h3 class="featurette-heading" style="text-align:center;">Encontrá todo lo que necesita en nuestro Catálogo</h3>
 
-       <h1></h1>
+    </div>
+ </div>
+<hr class="featurette-divider">
 
-     </div>
+
+<!----------REPOSTERIA-------------->
+
+  <div class="row featurette">
+    <div class="col-md-12">
+      <h2 class="featurette-heading" style="text-align:center;">REPOSTERÍA</h2>
+      <h3 class="featurette-heading" style="text-align:center;">Todo para tus Tortas</h3>
+    </div>
    </div>
 <hr class="featurette-divider">
 
@@ -33,9 +43,118 @@
      </div><!-- /.col-lg-4 -->
       {% endfor %}
    </div><!-- /.row -->
+  </div>
+
+<!------------------DISFRACES Y ACCESORIOS------------->
 
 
+  <div class="row featurette">
+    <div class="col-md-12">
+      <h2 class="featurette-heading" style="text-align:center;">DISFRACES Y ACCESORIOS</h2>
+      <h3 class="featurette-heading" style="text-align:center;">Todos tus personajes favoritos</h3>
+
+    </div>
+  </div>
+   <div class="container marketing">
+
+     <div class="row">
+
+       {% for articulo in articulos %}
+       <div class="col-lg-4">
+         <img src="{{ articulo.imagen.url }}" width="240" height="240" alt="">
+         <!--svg class="bd-placeholder-img"  width="240" height="240"  preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg-->
+         <h2>{{ articulo.nombre }}</h2>
+         <p>{{ articulo.descripcion }}</p>
+         <p>Precio $ <b>{{ articulo.precio }}</b></p>
+         <p><a class="btn btn-secondary" href="#" role="button">Agregar al Carrito</a></p>
+       </div><!-- /.col-lg-4 -->
+        {% endfor %}
+     </div><!-- /.row -->
+    </div>
+
+
+    <!--------------DESCARTABLES------------------>
+
+    <div class="row featurette">
+      <div class="col-md-12">
+        <h2 class="featurette-heading" style="text-align:center;">DESCARTABLES</h2>
+        <h3 class="featurette-heading" style="text-align:center;">Platos, vasos, blondas, etc..</h3>
+
+      </div>
+    </div>
+     <div class="container marketing">
+
+       <div class="row">
+
+         {% for articulo in articulos %}
+         <div class="col-lg-4">
+           <img src="{{ articulo.imagen.url }}" width="240" height="240" alt="">
+           <!--svg class="bd-placeholder-img"  width="240" height="240"  preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg-->
+           <h2>{{ articulo.nombre }}</h2>
+           <p>{{ articulo.descripcion }}</p>
+           <p>Precio $ <b>{{ articulo.precio }}</b></p>
+           <p><a class="btn btn-secondary" href="#" role="button">Agregar al Carrito</a></p>
+         </div><!-- /.col-lg-4 -->
+          {% endfor %}
+       </div><!-- /.row -->
+      </div>
+
+
+<!----------------DECORACION-------------->
+
+<div class="row featurette">
+  <div class="col-md-12">
+    <h2 class="featurette-heading" style="text-align:center;">DECORACION</h2>
+    <h3 class="featurette-heading" style="text-align:center;">Girnaldas, carteles, adornos, etc...</h3>
 
   </div>
+</div>
+ <div class="container marketing">
+
+   <div class="row">
+
+     {% for articulo in articulos %}
+     <div class="col-lg-4">
+       <img src="{{ articulo.imagen.url }}" width="240" height="240" alt="">
+       <!--svg class="bd-placeholder-img"  width="240" height="240"  preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg-->
+       <h2>{{ articulo.nombre }}</h2>
+       <p>{{ articulo.descripcion }}</p>
+       <p>Precio $ <b>{{ articulo.precio }}</b></p>
+       <p><a class="btn btn-secondary" href="#" role="button">Agregar al Carrito</a></p>
+     </div><!-- /.col-lg-4 -->
+      {% endfor %}
+   </div><!-- /.row -->
+  </div>
+
+
+  <!--------------------CUMPLEAÑOS----------------->
+  <div class="row featurette">
+    <div class="col-md-12">
+      <h2 class="featurette-heading" style="text-align:center;">CUMPLEAÑOS</h2>
+      <h3 class="featurette-heading" style="text-align:center;">Velitas, bengalas, adornos para torta, etc...</h3>
+
+    </div>
+  </div>
+   <div class="container marketing">
+
+     <div class="row">
+
+       {% for articulo in articulos %}
+       <div class="col-lg-4">
+         <img src="{{ articulo.imagen.url }}" width="240" height="240" alt="">
+         <!--svg class="bd-placeholder-img"  width="240" height="240"  preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg-->
+         <h2>{{ articulo.nombre }}</h2>
+         <p>{{ articulo.descripcion }}</p>
+         <p>Precio $ <b>{{ articulo.precio }}</b></p>
+         <p><a class="btn btn-secondary" href="#" role="button">Agregar al Carrito</a></p>
+       </div><!-- /.col-lg-4 -->
+        {% endfor %}
+     </div><!-- /.row -->
+    </div>
+
+
+
+
+
 </main>
 {% endblock %}
