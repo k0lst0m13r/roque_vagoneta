@@ -9,6 +9,3 @@ def tienda(request):
     articulos = Articulo.objects.all()
     ctx = {'articulos': articulos}
     return render(request,'roque_vago_app/tienda.html', ctx)
-
-def contacto(request):
-    return render(request, 'roque_vago_app/contacto.html')
