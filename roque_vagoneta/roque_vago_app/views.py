@@ -7,22 +7,16 @@ def index(request):
 
 def tienda(request):
 
-    articulos = Reposteria.objects.all()
-    ctx = {'articulos': articulos}
-    return render(request,'roque_vago_app/tienda.html', ctx)
+    reposteria = Reposteria.objects.all()
 
-    articulos = DisfracesYaccesorios.objects.all()
-    ctx = {'articulos': articulos}
-    return render(request,'roque_vago_app/tienda.html', ctx)
+    disfraces = DisfracesYaccesorios.objects.all()
 
-    articulos = Descartables.objects.all()
-    ctx = {'articulos': articulos}
-    return render(request,'roque_vago_app/tienda.html', ctx)
+    descartables = Descartables.objects.all()
 
-    articulos = Decoracion.objects.all()
-    ctx = {'articulos': articulos}
-    return render(request,'roque_vago_app/tienda.html', ctx)
+    decoracion = Decoracion.objects.all()
 
-    articulos = Cumpleanios.objects.all()
-    ctx = {'articulos': articulos}
+    cumple = Cumpleanios.objects.all()
+
+    
+    ctx = {'cumple': cumple, 'reposteria': reposteria, 'disfraces': disfraces, 'descartables': descartables, 'decoracion': decoracion,}
     return render(request,'roque_vago_app/tienda.html', ctx)

@@ -5,21 +5,23 @@
 
 {% block content %}
 
-<div class="row featurette">
+<div class="container"  >
   <div class="col-md-12">
-    <h2 class="featurette-heading" style="text-align:center;">CONTACTO</h2>
+    <h2 class="featurette-divider" style="text-align:center;">CONTACTO</h2>
      <hr class="featurette-divider">
       <div class="container">
-        <table style="margin: auto">
-
+        <form method="POST"  >
+          {% csrf_token %}
+         <table style="margin: auto">
          {{ formulario.as_table }}
-
-
          </table>
+         <div class="col-md-12  style="margin: auto;">
+         <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Enviar Consulta</button>
+        </div>
+        </form>
        </div>
-
+     </div>
    </div>
- </div>
 <hr class="featurette-divider">
 
 {% endblock %}
