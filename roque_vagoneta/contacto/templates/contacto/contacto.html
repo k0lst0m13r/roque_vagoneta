@@ -6,11 +6,19 @@
 {% block content %}
 
 <div class="container"  >
-  <div class="col-md-12">
-    <h2 class="featurette-divider" style="text-align:center;">CONTACTO</h2>
+  <div class="col-md-12" style="text-align:center;">
+    <h2 class="featurette-heading" >CONTACTO</h2>
      <hr class="featurette-divider">
+
+     {% if "valido" in request.GET %}
+     <div class="col-md-12" style="text-align:center;">
+       <h4 class="featurette-heading" >Consulta enviada correctamente</h4>
+         <hr class="featurette-divider">
+     </div>
+     {% endif %}
+     <p>{{request.POST}}</p>
       <div class="container">
-        <form method="POST"  >
+        <form method="POST">
           {% csrf_token %}
          <table style="margin: auto">
          {{ formulario.as_table }}

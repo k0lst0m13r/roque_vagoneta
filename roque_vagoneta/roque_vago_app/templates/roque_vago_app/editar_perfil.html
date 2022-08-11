@@ -1,0 +1,32 @@
+{% extends 'roque_vago_app/base.html' %}
+{% load static %}
+
+{% block title %}Editar Perfil{% endblock %}
+
+{% block content %}
+
+<main role="main">
+
+  <div class="row featurette">
+    <div class="col-md-12">
+      <h2 class="featurette-heading" style="text-align:center;">PERFIL</h2>
+      <h3 class="featurette-heading" style="text-align:center;">Este es tu perfil de usuario</h3>
+
+    </div>
+   </div>
+  <hr class="featurette-divider">
+
+  <div class="container marketing">
+    <div class="d-flex justify-cntent-center align-items-center">
+        <form method="POST" >
+          {% csrf_token %}
+            {{ form.as_p }}
+            <button  class="btn btn-secondary"   type="submit">Guardar Cambios</button>
+        </form>
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+</main>
+
+{% endblock %}

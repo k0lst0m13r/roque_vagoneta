@@ -1,0 +1,40 @@
+{% extends 'roque_vago_app/base.html' %}
+{% load static %}
+
+{% block title %}Perfil{% endblock %}
+
+{% block content %}
+
+<main role="main">
+
+  <div class="row featurette">
+    <div class="col-md-12">
+      <h2 class="featurette-heading" style="text-align:center;">PERFIL</h2>
+      <h3 class="featurette-heading" style="text-align:center;">Este es tu perfil de usuario</h3>
+
+    </div>
+ </div>
+<hr class="featurette-divider">
+
+      <div class="container">
+        <div class="row">
+          <p><b>USUARIO:</b> {{user.username}} </p>
+        </div>
+        <div class="row">
+          <p><b>NOMBRE:</b> {{user.first_name}} </p>
+        </div>
+        <div class="row">
+          <p><b>APELLIDO:</b> {{user.last_name}} </p>
+        </div>
+        <div class="row">
+          <p><b>EMAIL:</b> {{user.email}} </p>
+       </div>
+       <div class="row">
+         <a href="{% url 'editar_perfil' %}">
+         <button  class="btn btn-secondary" type="submit">Editar</button>
+       </a>
+     </div>
+    <hr class="featurette-divider">
+</main>
+
+{% endblock %}

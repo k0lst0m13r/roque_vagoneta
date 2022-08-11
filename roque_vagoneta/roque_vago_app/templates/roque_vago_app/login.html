@@ -1,0 +1,30 @@
+{% extends 'roque_vago_app/base.html' %}
+{% load static %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+<main role="main">
+
+  <div class="row featurette">
+    <div class="col-md-12">
+      <h2 class="featurette-heading" style="text-align:center;">INICIO DE SESIÓN</h2>
+      <h3 class="featurette-heading" style="text-align:center;">Iniciá sesión o registrate para hacer tu pedido</h3>
+
+    </div>
+ </div>
+<hr class="featurette-divider">
+
+              <div class="container marketing">
+                <div class="d-flex justify-cntent-center align-items-center">
+                    <form method="POST" >
+                      {% csrf_token %}
+                        {{ form.as_p }}
+                        <button  class="btn btn-secondary"   type="submit">Iniciar Sesión</button>
+                    </form>
+                </div>
+              </div>
+            <hr class="featurette-divider"><hr class="featurette-divider">
+  </main>
+    {% endblock %}

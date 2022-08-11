@@ -1,0 +1,23 @@
+
+{% extends 'roque_vago_app/base.html' %}
+{% load static %}
+
+{% block title %}Consulta Exitosa{% endblock %}
+
+{% block content %}
+
+<div class="container"  >
+  <div class="col-md-12" style="text-align:center;">
+    <h1 class="featurette-heading" >GRACIAS!</h1>
+     <hr class="featurette-divider">
+       <div class="col-md-12" style="text-align:center;">
+         <h3 class="featurette-heading" >Su Consulta fué enviada correctamente</h3>
+           <p>Le responderemos a la brevedad.</p>
+              <a href="{% url 'index' %}">Volver</a>
+           <hr class="featurette-divider">
+       </div>
+     </div>
+   </div>
+<hr class="featurette-divider">
+
+{% endblock %}
