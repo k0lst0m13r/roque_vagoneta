@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from roque_vago_app.models import *
+from tienda.models import *
 
 # Create your views here.
 def tienda(request):
@@ -17,4 +17,3 @@ def tienda(request):
 
     ctx = {'cumple': cumple, 'reposteria': reposteria, 'disfraces': disfraces, 'descartables': descartables, 'decoracion': decoracion,}
     return render(request,'tienda/tienda.html', ctx)
- 
