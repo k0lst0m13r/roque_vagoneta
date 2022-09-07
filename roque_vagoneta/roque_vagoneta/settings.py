@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'roque_vago_app',
     'contacto',
     'tienda',
+    'carro', 
 ]
 
 MIDDLEWARE = [
