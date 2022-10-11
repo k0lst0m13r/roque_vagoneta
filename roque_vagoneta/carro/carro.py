@@ -14,9 +14,9 @@ class Carro:
         if (str(articulo.id) not in self.carro.keys()):
             self.carro[articulo.id] = {
                 "articulo_id": articulo_id,
-                "nombre": nombre,
+                "nombre": articulo.nombre,
                 "cantidad": 1,
-                "precio": precio,
+                "precio": str(articulo.precio),
             }
         else:
             for key, value in self.carro.items():
@@ -29,9 +29,9 @@ class Carro:
         self.session["carro"] = self.carro
         self.session.modified = True
 
-    def eliminar(self, articulo):
+    def eliminar_articulo(self, articulo):
         articulo.id = str(articulo.id)
-        if articulo.id is in self.carro:
+        if articulo.id in self.carro:
             del self.carro[articulo.id]
             self.guardar_carro()
 
@@ -40,7 +40,7 @@ class Carro:
             if key == str(articulo.id):
                 value["cantidad"] = value["cantidad"] - 1
                 if value["cantidad"] < 1:
-                    self.eliminar(articulo)
+                    self.eliminar_articulo(articulo)
                 break
         self.guardar_carro()
 
