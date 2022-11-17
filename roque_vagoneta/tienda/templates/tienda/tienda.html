@@ -41,7 +41,7 @@
        <h2>{{ articulo.nombre }}</h2>
        <p>{{ articulo.descripcion }}</p>
        <p>Precio $ <b>{{ articulo.precio }}</b></p>
-       <p><a class="btn btn-secondary" href="#" role="button">Agregar al Carrito</a></p>
+       <p><a class="btn btn-secondary" href="{% url 'carro:agregar_reposteria' articulo_id %}" role="button">Agregar al Carrito</a></p>
      </div><!-- /.col-lg-4 -->
       {% endfor %}
    </div><!-- /.row -->
