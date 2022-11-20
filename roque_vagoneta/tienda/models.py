@@ -6,7 +6,7 @@ class Categoria(models.Model):
     nombre = models.CharField(max_length=50)
 
     class Meta:
-        verbose_name = 'Categoria '
+        verbose_name = 'Categoria'
         verbose_name_plural = 'Categorias'
 
     def __str__(self):
@@ -19,10 +19,10 @@ class Articulo(models.Model):
     descripcion = models.CharField(max_length=200)
     imagen = models.ImageField(upload_to='articulos')
     precio = models.DecimalField(max_digits=7, decimal_places=2, default=0.00)
-    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE) 
+    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
 
     class Meta:
-        verbose_name = 'Articulos'
+        verbose_name = 'Articulo'
         verbose_name_plural = 'Articulos'
 
     def __str__(self):
