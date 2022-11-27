@@ -122,14 +122,24 @@
             </tr>
 
             <tbody>
-              {% for key, value in request.session.carro.items %}
+              {% if request.session.carro.items %}
+                {% for key, value in request.session.carro.items %}
                 <tr>
                   <td>{{value.nombre}}</td>
                   <td>{{value.cantidad}}</td>
+                  <td>
 
+                  </td>
                 </tr>
               {% endfor %}
-
+            {% else %}
+               <tr>
+                 <td colspan="3"></td>
+                 <div class=" text-center">
+                    Carro vacio
+                 </div>
+               </tr>
+               {% endif %}
             </tbody>
           </thead>
 
