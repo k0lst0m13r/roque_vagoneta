@@ -12,6 +12,15 @@
       <h2 class="featurette-heading" style="text-align:center;">TIENDA</h2>
       <h3 class="featurette-heading" style="text-align:center;">Encontrá todo lo que necesitás en nuestro Catálogo</h3>
    </div>
+   {% if messages %}
+  <div class="container">
+    {% for msg in messages %}
+      <div class="alert alert-success" role="alert" style="text-align:center;">
+        {{msg}}
+      </div>  
+    {% endfor %}
+  </div>
+  {% endif %}
   </div>
 <hr class="featurette-divider">
 

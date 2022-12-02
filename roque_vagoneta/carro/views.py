@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .carro import Carro
 from tienda.models import *
+from django.contrib import messages
 
 
 # Create your views here.
@@ -11,6 +12,7 @@ def agregar_articulo(request, articulo_id):
     carro = Carro(request)
     articulo = Articulo.objects.get(id=articulo_id)
     carro.agregar(articulo=articulo)
+    messages.success (request,  'Artículo agregado con exito!')
     return redirect("tienda")
 
 
