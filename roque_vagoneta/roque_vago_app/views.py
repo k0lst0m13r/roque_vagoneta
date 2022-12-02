@@ -4,6 +4,7 @@ from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from roque_vago_app.models import *
 from django.contrib.auth import login, logout, authenticate
 from .forms import *
+from django.contrib import messages
 
 # Create your views here.
 def index(request):
@@ -28,6 +29,7 @@ def log_in(request):
             else:
                 return redirect('login')
         else:
+            messages.success (request,  'Error en Usuario o Contraseña')
             return redirect('login')
     form =  AuthenticationForm()
     ctx = {"form": form}

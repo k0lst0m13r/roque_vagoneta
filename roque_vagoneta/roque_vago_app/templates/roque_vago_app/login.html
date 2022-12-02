@@ -11,20 +11,32 @@
     <div class="col-md-12">
       <h2 class="featurette-heading" style="text-align:center;">INICIO DE SESIÓN</h2>
       <h3 class="featurette-heading" style="text-align:center;">Iniciá sesión o registrate para hacer tu pedido</h3>
-
     </div>
- </div>
-<hr class="featurette-divider">
+  </div>
+  <hr class="featurette-divider">
+ 
+<!-------Mensaje de Login erroneo------->
 
-              <div class="container marketing">
-                <div class="d-flex justify-cntent-center align-items-center">
-                    <form method="POST" >
-                      {% csrf_token %}
-                        {{ form.as_p }}
-                        <button  class="btn btn-secondary"   type="submit">Iniciar Sesión</button>
-                    </form>
-                </div>
-              </div>
-            <hr class="featurette-divider"><hr class="featurette-divider">
+  {% if messages %}
+  <div class="container">
+    {% for msg in messages %}
+      <div class="alert alert-danger" role="alert" style="text-align:center;">
+        {{msg}}
+      </div>  
+    {% endfor %}
+  </div>
+  {% endif %}
+
+<!--------Formulario-------------->
+
+  <div class="container">
+    <form method="POST" >
+        {% csrf_token %}
+        {{ form.as_p }}
+      <button  class="btn btn-secondary" type="submit">Iniciar Sesión</button>
+    </form>
+  </div>
+  <hr class="featurette-divider">
   </main>
-    {% endblock %}
+  
+  {% endblock %}

@@ -75,7 +75,7 @@
        {% if user.is_authenticated %}
        <ul class="navbar-nav justify-content-end">
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'perfil' %}"><b>{{user.username}}</b></a>
+          <a class="nav-link" href="{% url 'perfil' %}"><b>Hola! {{user.username}}</b></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'logout' %}"><b>Cerrar Sesión</b></a>

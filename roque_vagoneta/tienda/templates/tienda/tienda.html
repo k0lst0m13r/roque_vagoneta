@@ -12,8 +12,9 @@
       <h2 class="featurette-heading" style="text-align:center;">TIENDA</h2>
       <h3 class="featurette-heading" style="text-align:center;">Encontrá todo lo que necesitás en nuestro Catálogo</h3>
    </div>
-    </div>
+  </div>
 <hr class="featurette-divider">
+
 
 
 
@@ -36,7 +37,7 @@
        <h2>{{ articulo.nombre }}</h2>
        <p>{{ articulo.descripcion }}</p>
        <p>Precio $ <b>{{ articulo.precio }}</b></p>
-       <p><a class="btn btn-secondary" href="{% url 'carro:agregar' articulo.id %}" role="button">Agregar al Carrito</a></p>
+       <p><a class="btn btn-secondary" href="{% url 'carro:agregar' articulo.id %}" role="button" >Agregar al Carrito</a></p>
      </div><!-- /.col-lg-4 -->
      {% endif %}
    {% endfor %}
