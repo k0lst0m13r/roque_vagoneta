@@ -30,7 +30,7 @@ class Pedido(models.Model):
         ordering = ["id"]
         
         
-class DetalleArticulos(models.Model):
+class DetallePedido(models.Model):
     
     user = models.ForeignKey(User, on_delete=models.CASCADE)  
     articulo_id = models.ForeignKey(Articulo, on_delete=models.CASCADE)
@@ -42,8 +42,9 @@ class DetalleArticulos(models.Model):
         return f'{self.cantidad}{self.articulo_id.nombre}'
     
     class Meta:
-        db_table = 'detallearticulos'
-        verbose_name = 'Detalle Articulos'
+        db_table = 'detallepedido'
+        verbose_name = 'Detalle Pedido'
+        verbose_name_plural = 'Detalle Pedido'
         ordering = ["id"]
     
     
