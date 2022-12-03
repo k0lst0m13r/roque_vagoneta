@@ -7,7 +7,6 @@ class Carro:
         carro = self.session.get("carro")
         if not carro:
             carro = self.session['carro'] = {}
-        #else:
         self.carro = carro
 
 

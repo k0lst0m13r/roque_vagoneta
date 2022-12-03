@@ -12,7 +12,7 @@ def agregar_articulo(request, articulo_id):
     carro = Carro(request)
     articulo = Articulo.objects.get(id=articulo_id)
     carro.agregar(articulo=articulo)
-    messages.success (request,  'Artículo agregado con exito!')
+    messages.success (request, 'Artículo agregado con exito!')
     return redirect("tienda")
 
 
