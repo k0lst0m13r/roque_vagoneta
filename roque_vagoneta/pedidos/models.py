@@ -8,7 +8,7 @@ User = get_user_model()
 
 class Pedido(models.Model):
 
-    user = models.Foreign.Key(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
@@ -32,10 +32,10 @@ class Pedido(models.Model):
         
 class DetalleArticulos(models.Model):
     
-    user = models.Foreign.Key(User, on_delete=models.CASCADE)  
-    articulo_id = models.Foreign.Key(Articulo, on_delete=models.CASCADE)
-    pedido_id = models.Foreign.Key(Pedido, on_delete=models.CASCADE)
-    cantidad = models.IntgerField(default=1)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)  
+    articulo_id = models.ForeignKey(Articulo, on_delete=models.CASCADE)
+    pedido_id = models.ForeignKey(Pedido, on_delete=models.CASCADE)
+    cantidad = models.IntegerField(default=1)
     created_at = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
@@ -43,7 +43,7 @@ class DetalleArticulos(models.Model):
     
     class Meta:
         db_table = 'detallearticulos'
-        vervose_name = 'Detalle Articulos'
+        verbose_name = 'Detalle Articulos'
         ordering = ["id"]
     
     

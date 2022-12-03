@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'contacto',
     'tienda',
     'carro',
+    'pedidos',
 ]
 
 MIDDLEWARE = [
