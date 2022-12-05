@@ -51,15 +51,22 @@
         <li class="nav-item {% if request.path == '/contacto' %}active{% endif %}">
           <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="{% url 'tienda' %}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Tienda
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{% url 'tienda' %}">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
+        <li class="nav-item {% if request.path == '/tienda' %}active{% endif %} dropdown">
+          <div class="btn-group">
+            <a type="button" class="btn nav-link" href="{% url 'tienda' %}">Tienda</a>
+            <a type="button" class="btn nav-link dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+              <span class="sr-only">Toggle Dropdown</span>
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/tienda #reposteria">Repostería</a>
+              <a class="dropdown-item" href="/tienda #disfraces">Disfraces y Accesorios</a>
+              <a class="dropdown-item" href="/tienda #descartables">Descartables</a>
+              <a class="dropdown-item" href="/tienda #decoracion">Decoración</a>
+              <a class="dropdown-item" href="/tienda #cumpleanios">Cumpleaños</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </div>
         </li>
 
 
@@ -99,7 +106,7 @@
   </nav>
 
 
-  <!---------------- Modal-------------------->
+  <!----------------Carrito-------------------->
 
   <div class="modal fade" id="carrito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
@@ -159,7 +166,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          <a href= "#"><button type="button" class="btn btn-primary">Enviar pedido</button></a>  
+          <a href= "{% url 'pedidos:enviar_pedido' %}"><button type="button" class="btn btn-primary">Enviar pedido</button></a>  
         </div>
       </div>
     </div>
