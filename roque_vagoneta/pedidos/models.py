@@ -33,13 +33,13 @@ class Pedido(models.Model):
 class DetallePedido(models.Model):
     
     user = models.ForeignKey(User, on_delete=models.CASCADE)  
-    articulo_id = models.ForeignKey(Articulo, on_delete=models.CASCADE)
-    pedido_id = models.ForeignKey(Pedido, on_delete=models.CASCADE)
+    articulo = models.ForeignKey(Articulo, on_delete=models.CASCADE)
+    pedido = models.ForeignKey(Pedido, on_delete=models.CASCADE)
     cantidad = models.IntegerField(default=1)
     created_at = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
-        return f'{self.cantidad}{self.articulo_id.nombre}'
+        return f'{self.cantidad}{self.articulo.nombre}'
     
     class Meta:
         db_table = 'detallepedido'
