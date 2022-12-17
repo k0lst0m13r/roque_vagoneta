@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .carro import Carro
 from tienda.models import *
 from django.contrib import messages
+from django.http import HttpResponseRedirect
 
 
 # Create your views here.
