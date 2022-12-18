@@ -5,6 +5,27 @@
 
 {% block content %}
 
+<style>
+  h1.opacity {    
+    background: rgba(55, 55, 55, 0.6);
+    text-shadow: 2px 2px 5px rgb(5, 5, 5);
+
+  }
+
+  p.opacity {
+    background: rgba(55, 55, 55, 0.6);
+    text-shadow: 2px 2px 5px rgb(5, 5, 5);
+    font-weight: bold;
+  }
+
+  a.btn-color {
+    background-color: rgb(74, 74, 74);
+    color: white;
+    border: 2px solid white;
+  }
+
+</style>
+
 <main role="main">
 
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -15,32 +36,32 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
+        <img src="{% static 'imagenes/carru1.jpg' %}">
         <div class="container">
           <div class="carousel-caption text-left">
-            <h1>Example headline.</h1>
-            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+            <h1 class="opacity" >Hola! Somos Roque Vagoneta.</h1>
+            <p class="opacity">Esta es nuestra tienda virtual, donde te ofrecemos todo lo que necesitás para decorar, alegrar y disfrutar tus cumpleaños, casamientos, eventos y fiestas. Necesitás registrarte para hacernos tu pedido.</p>
+            <p><a class="btn btn-lg btn-color" href="{% url 'registro' %}" role="button">Registrate</a></p>
           </div>
         </div>
       </div>
       <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
+        <img src="{% static 'imagenes/carru6.jpg' %}">
         <div class="container">
           <div class="carousel-caption">
-            <h1>Another example headline.</h1>
-            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+            <h1 class="opacity">Visitá nuestra Tienda.</h1>
+            <p class="opacity">En las diferentes secciones vas a encontrar todo lo necesario. Decoración, Disfraces, Accesorios, Descartables y mucho mas. Todo el Cotillón a tu alcance!</p>
+            <p><a class="btn btn-lg btn-color" href="{% url 'tienda' %}" role="button">Ir a la Tienda</a></p>
           </div>
         </div>
       </div>
       <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
+        <img src="{% static 'imagenes/carru5.jpg' %}">
         <div class="container">
           <div class="carousel-caption text-right">
-            <h1>One more for good measure.</h1>
-            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+            <h1 class="opacity">Entregamos a Domicilio.</h1>
+            <p class="opacity">Aprovechá nuestro servicio de entrega en Capital y Gran Buenos Aires. Si ya estás registrado, iniciá sesión y hacenos tu pedido. Nos comunicaremos a la brevedad para acordar envío y pago.</p>
+            <p><a class="btn btn-lg btn-color" href="{% url 'login' %}" role="button">Inicía tu sesión</a></p>
           </div>
         </div>
       </div>
