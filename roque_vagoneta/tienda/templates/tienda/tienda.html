@@ -5,13 +5,34 @@
 
 {% block content %}
 
+<style>
+div.encabezado {
+  
+background-color: rgb(78, 77, 77);
+color: aliceblue;
+padding-bottom: 50px;
+padding-top: 50px;
+
+}
+
+a {
+  color: aliceblue;
+}
+
+</style>
+
+
+
 <main role="main">
 
   <div class="row featurette">
-    <div class="col-md-12">
+    <div class="col-md-12  encabezado">
       <hgroup>
-        <h2 class="featurette-heading" style="text-align:center;">TIENDA</h2>
-        <h3 class="featurette-heading" style="text-align:center;">Encontrá todo lo que necesitás en nuestro Catálogo</h3>
+        <h2 class="display-2" style="text-align:center;">TIENDA</h2>
+        <h3 style="text-align:center;">Encontrá todo lo que necesitás en nuestro Catálogo</h3>
+        <p style="text-align:center;"><a href="{% url 'login' %}">Iniciá sesión</a> o <a href="{% url 'registro' %}">Registrate</a>,
+         recorré nuestra tienda, agregá los productos que necesites
+        y envianos tu pedido para que nos comuniquemos con vos y coordinemos el pago y la entrega.</p>
       </hgroup>
    </div>
    {% if messages %}
@@ -24,7 +45,7 @@
   </div>
   {% endif %}
   </div>
-<hr class="featurette-divider">
+
 
 
 
@@ -35,11 +56,11 @@
     <div class="col-md-12" id="reposteria">
       <hgroup>
         <h2 class="featurette-heading" style="text-align:center;">REPOSTERÍA</h2>
-        <h3 class="featurette-heading" style="text-align:center;">Todo para tus Tortas</h3>
+        <h3 style="text-align:center;">Todo para tus Tortas</h3>
       </hgroup>
     </div>
  </div>
-
+ 
  <div class="container marketing">
    <div class="row">
      {% for articulo in articulos %}
@@ -69,11 +90,12 @@
     <div class="col-md-12" id="disfraces">
       <hgroup>
         <h2 class="featurette-heading" style="text-align:center;">DISFRACES Y ACCESORIOS</h2>
-        <h3 class="featurette-heading" style="text-align:center;">Todos tus personajes favoritos</h3>
+        <h3 style="text-align:center;">Todos tus personajes favoritos</h3>
       </hgroup>    
     </div>
   </div>
 
+  
    <div class="container marketing">
      <div class="row">
        {% for articulo in articulos %}
@@ -101,7 +123,7 @@
       <div class="col-md-12" id="descartables">
         <hgroup>
           <h2 class="featurette-heading" style="text-align:center;">DESCARTABLES</h2>
-          <h3 class="featurette-heading" style="text-align:center;">Platos, vasos, blondas, etc..</h3>
+          <h3 style="text-align:center;">Platos, vasos, blondas, etc..</h3>
         </hgroup>
       </div>
     </div>
@@ -133,7 +155,7 @@
   <div class="col-md-12" id="decoracion">
     <hgroup>
       <h2 class="featurette-heading" style="text-align:center;">DECORACION</h2>
-      <h3 class="featurette-heading" style="text-align:center;">Girnaldas, carteles, adornos, etc...</h3>
+      <h3 style="text-align:center;">Girnaldas, carteles, adornos, etc...</h3>
     </hgroup>
   </div>
 </div>
@@ -166,7 +188,7 @@
     <div class="col-md-12" id="cumpleanios">
       <hgroup>  
         <h2 class="featurette-heading" style="text-align:center;">CUMPLEAÑOS</h2>
-        <h3 class="featurette-heading" style="text-align:center;">Velitas, bengalas, adornos para torta, etc...</h3>
+        <h3 style="text-align:center;">Velitas, bengalas, adornos para torta, etc...</h3>
       </hgroup>
     </div>
   </div>
