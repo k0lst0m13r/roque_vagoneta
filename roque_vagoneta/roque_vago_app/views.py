@@ -5,13 +5,14 @@ from roque_vago_app.models import *
 from django.contrib.auth import login, logout, authenticate
 from .forms import *
 from django.contrib import messages
-from carro.carro import Carro
+from tienda.models import *
 # Create your views here.
 def index(request):
     
-    carro = Carro(request)
-    
-    return render(request, 'roque_vago_app/index.html')
+    articulos = Articulo.objects.all()
+
+    ctx = {"articulos": articulos}    
+    return render(request, 'roque_vago_app/index.html', ctx)
 
 
 
