@@ -1,0 +1,70 @@
+{% extends 'roque_vago_app/base.html' %}
+{% load static %}
+
+{% block title %}Contacto{% endblock %}
+
+{% block content %}
+<style>
+    figure img{
+    padding: 4px;
+    box-shadow:rgb(158, 228, 249) 3px 3px 5px;
+    border-radius: 17px;
+    background-color: aliceblue;
+    margin: 20px;
+    
+}
+
+figure img:hover{
+    -moz-transform: scale(1.2);
+    -moz-transition: 0.3s;
+    
+}
+
+figure img:active{
+    -moz-transform: none;
+    -moz-transition: none;
+}
+
+figcaption{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px;
+    text-align: center;
+}
+</style>
+
+
+<main role="main">
+    <div class="row featurette">
+        <div class="col-md-12">
+            <h2 class="featurette-heading" style="text-align:center;">CONTACTO</h2>
+            <h3 style="text-align:center;">Comunicate con nosotros</h3>
+        </div>
+    </div>
+    <hr class="featurette-divider">
+    
+    <div class="container marketing">
+        <div class="row">
+            <div class="col-lg-4">
+                <figure>
+                    <a href="https://wa.me/541161002015"><img src="{% static 'imagenes/walogo.png' %}" alt="whatsapp" width="200" height="200"></a>   
+                    <figcaption>WhatsApp</figcaption> 
+                </figure>
+            </div>
+            <div class="col-lg-4">
+                <figure>
+                    <a href="https://www.instagram.com/roque.vagoneta/"><img src="{% static 'imagenes/iglogo.png' %}" alt="whatsapp" width="200" height="200"></a>   
+                    <figcaption>Instagram</figcaption> 
+                </figure>
+            </div>
+            <div class="col-lg-4">
+                <figure>
+                    <a href="https://www.facebook.com/search/top?q=roque.vagoneta"><img src="{% static 'imagenes/fblogo.png' %}" alt="whatsapp" width="200" height="200"></a>   
+                    <figcaption>Facebook</figcaption> 
+                </figure>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+{% endblock %}

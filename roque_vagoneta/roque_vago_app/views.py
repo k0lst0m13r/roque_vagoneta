@@ -102,3 +102,11 @@ def editar_perfil(request):
 
     ctx = {'form': form,}
     return render(request, 'roque_vago_app/editar_perfil.html', ctx)
+
+
+#################### CONTACTO ##################
+
+
+def contacto(request):
+    
+    return render(request, 'roque_vago_app/contacto.html')

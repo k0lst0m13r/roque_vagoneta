@@ -27,9 +27,9 @@ urlpatterns = [
     path('registro', views.registro, name="registro"),
     path('perfil',views.perfil, name="perfil"),
     path('editar_perfil',views.editar_perfil, name="editar_perfil"),
+    path('contacto', views.contacto, name="contacto"),
 
 
-    path("contacto", include("contacto.urls")),
     path("tienda", include("tienda.urls")),
     path("carro", include("carro.urls")),
     path("pedidos", include("pedidos.urls")),

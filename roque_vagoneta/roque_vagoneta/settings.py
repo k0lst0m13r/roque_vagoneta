@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'roque_vago_app',
-    'contacto',
     'tienda',
     'carro',
     'pedidos',
