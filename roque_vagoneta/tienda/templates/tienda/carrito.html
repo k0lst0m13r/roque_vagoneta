@@ -1,0 +1,64 @@
+{% extends 'roque_vago_app/base.html' %}
+{% load static %}
+
+{% block title %}Carrito{% endblock %}
+
+{% block content %}
+
+<main role="main">
+
+  <div class="row featurette" style="padding-bottom: 80px;">
+    <div class="col-md-12">
+      <h2 class="featurette-heading" style="text-align:center;">TU CARRITO DE COMPRAS</h2>
+      <h3 style="text-align:center;">Podés agregarle mas unidades a los artículos que elegiste </h3>
+    </div>
+ </div>
+ 
+  
+ <div class="container text center">
+    <table class="table table_bordered">
+      <thead>
+        <tr>
+          <th colspan="4" class="text-center">
+            Detalle de compra
+          </th>
+        </tr>
+        <tr>
+          <th>Artículo</th>
+          <th>Cantidad</th>
+          <th>Parcial</th>
+        </tr>
+  
+        <tbody>
+          {% if request.session.carro.items %}
+            {% for key, value in request.session.carro.items %}
+            <tr>
+              <td>{{value.nombre}}</td>
+              <td>
+                <a href="{% url 'carro:sacar' value.articulo_id %}" class="btn btn-sm btn-secondary"><</a>
+                {{value.cantidad}}
+                <a href="{% url 'carro:agregar' value.articulo_id %}" class="btn btn-sm btn-secondary">></a>
+              </td>
+              <td>${{value.precio}}
+  
+              </td>
+              <td>
+                <a href="{% url 'carro:eliminar' value.articulo_id %}" class="btn btn-sm btn-danger">x</a>
+              </td>
+            </tr>
+          {% endfor %}
+        {% else %}
+           <tr>
+             <td colspan="4"></td>
+             <div class=" text-center">
+                Carro vacio
+             </div>
+           </tr>
+           {% endif %}
+        </tbody>
+      </thead>
+    </table>
+  </div>
+</main>
+
+  {% endblock %}

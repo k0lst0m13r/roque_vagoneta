@@ -88,7 +88,7 @@
           <a class="nav-link" href="{% url 'logout' %}"><b>Cerrar Sesión</b></a>
         </li>
         <li class="nav-item">
-          <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#carrito">Tu Pedido<i class="bi bi-cart3"></i></button>
+          <a href="{% url 'carrito' %}"><button type="button" class="btn btn-secondary">Tu Pedido<i class="bi bi-cart3"></i></button></a> 
         </li>
       </ul>
       {% else %}

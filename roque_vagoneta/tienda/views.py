@@ -9,3 +9,8 @@ def tienda(request):
 
     ctx = {"articulos": articulos}
     return render(request,'tienda/tienda.html', ctx)
+
+#-------------------CARRITO----------------------- 
+
+def carrito(request):
+    return render(request, 'tienda/carrito.html')
