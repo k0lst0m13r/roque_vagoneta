@@ -13,8 +13,7 @@ def agregar_articulo(request, articulo_id):
     carro = Carro(request)
     articulo = Articulo.objects.get(id=articulo_id)
     carro.agregar(articulo=articulo)
-    messages.success (request, 'Artículo agregado con exito!')
-    return redirect("tienda")
+    return redirect("carrito")
 
 
 #---------------------ELIMINAR DEL CARRO-------------------
@@ -23,7 +22,7 @@ def eliminar_articulo(request, articulo_id):
     carro = Carro(request)
     articulo = Articulo.objects.get(id=articulo_id)
     carro.eliminar(articulo=articulo)
-    return redirect("tienda")
+    return redirect("carrito")
 
 
 #--------------------SACAR DEL CARRO----------------
@@ -32,7 +31,7 @@ def sacar_articulo(request, articulo_id):
     carro = Carro(request)
     articulo = Articulo.objects.get(id=articulo_id)
     carro.sacar(articulo=articulo)
-    return redirect("tienda")
+    return redirect("carrito")
 
 
 

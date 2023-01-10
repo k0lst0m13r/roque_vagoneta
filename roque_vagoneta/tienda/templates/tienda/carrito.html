@@ -15,7 +15,7 @@
  </div>
  
   
- <div class="container text center">
+ <div class="container text-center">
     <table class="table table_bordered">
       <thead>
         <tr>
@@ -28,8 +28,8 @@
           <th>Cantidad</th>
           <th>Parcial</th>
         </tr>
-  
-        <tbody>
+      </thead> 
+      <tbody>
           {% if request.session.carro.items %}
             {% for key, value in request.session.carro.items %}
             <tr>
@@ -45,19 +45,29 @@
               <td>
                 <a href="{% url 'carro:eliminar' value.articulo_id %}" class="btn btn-sm btn-danger">x</a>
               </td>
-            </tr>
+            </tr>            
           {% endfor %}
         {% else %}
            <tr>
              <td colspan="4"></td>
-             <div class=" text-center">
+             <div class="text-center">
                 Carro vacio
              </div>
            </tr>
            {% endif %}
-        </tbody>
-      </thead>
+           
+      </tbody>      
     </table>
+    <div class="container">
+       <h2 style="text-align: right;">Total: ${{importe_total}}</h2>  
+    </div>
+    <div class="container">
+      <a href="{% url 'tienda' %}"><button type="button" class="btn btn-secondary">Volver a la Tienda</button></a>
+      <a href= "{% url 'pedidos:enviar_pedido' %}"><button type="button" class="btn btn-primary">Enviar pedido</button></a>  
+    </div>
+      
+    
+    <hr class="featurette-divider">
   </div>
 </main>
 

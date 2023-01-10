@@ -103,7 +103,7 @@
             <h2>{{ articulo.nombre }}</h2>
             <p>{{ articulo.descripcion }}</p>
             <p>{{ articulo.precio }}</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <p><a class="btn btn-secondary" href="{% url 'carro:agregar' articulo.id %}" role="button">Agregar al carrito</a></p>
           </div><!-- /.col-lg-4 -->
       {% endif %} 
       {% endfor %}
