@@ -101,76 +101,8 @@
         </li>
       </ul>
       {% endif %}
-
     </div>
-  </nav>
-
-
-  <!----------------Carrito-------------------->
-
-  <div class="modal fade" id="carrito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Tu pedido</h1>
-          
-        </div>
-        <div class="modal-body">
-
-
-        <table class="table table_bordered">
-          <thead>
-            <tr>
-              <th colspan="4" class="text-center">
-                Detalle de compra
-              </th>
-            </tr>
-            <tr>
-              <th>Artículo</th>
-              <th>Cantidad</th>
-              <th>Parcial</th>
-            </tr>
-
-            <tbody>
-              {% if request.session.carro.items %}
-                {% for key, value in request.session.carro.items %}
-                <tr>
-                  <td>{{value.nombre}}</td>
-                  <td>
-                    <a href="{% url 'carro:sacar' value.articulo_id %}" class="btn btn-sm btn-secondary"><</a>
-                    {{value.cantidad}}
-                    <a href="{% url 'carro:agregar' value.articulo_id %}" class="btn btn-sm btn-secondary">></a>
-                  </td>
-                  <td>${{value.precio}}
-
-                  </td>
-                  <td>
-                    <a href="{% url 'carro:eliminar' value.articulo_id %}" class="btn btn-sm btn-danger">x</a>
-                  </td>
-                </tr>
-              {% endfor %}
-            {% else %}
-               <tr>
-                 <td colspan="4"></td>
-                 <div class=" text-center">
-                    Carro vacio
-                 </div>
-               </tr>
-               {% endif %}
-            </tbody>
-          </thead>
-
-        </table>
-
-        <h2 class="modal-title fs-5 text-center" id="exampleModalLabel">Total: ${{importe_total}}</h2>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          <a href= "{% url 'pedidos:enviar_pedido' %}"><button type="button" class="btn btn-primary">Enviar pedido</button></a>  
-        </div>
-      </div>
-    </div>
-  </div>
+  </nav> 
 </header>
 
 <main role="main">
