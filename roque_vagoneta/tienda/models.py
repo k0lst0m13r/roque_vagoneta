@@ -16,7 +16,7 @@ class Categoria(models.Model):
 
 class Articulo(models.Model):
     nombre = models.CharField(max_length=50)
-    descripcion = models.CharField(max_length=200)
+    descripcion = models.CharField(max_length=1000)
     imagen = models.ImageField(upload_to='articulos')
     precio = models.DecimalField(max_digits=7, decimal_places=2, default=0.00)
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
