@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Pedido, DetallePedido
 from django.contrib import messages
 from django.template.loader import render_to_string
