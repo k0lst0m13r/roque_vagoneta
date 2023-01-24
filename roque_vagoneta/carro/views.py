@@ -40,7 +40,7 @@ def sacar_articulo(request, articulo_id):
 def vaciar_carro(request, articulo_id):
     carro = Carro(request)
     carro.vaciar_carro()
-    return redirect("tienda")
+    return redirect("carrito")
 
 
 

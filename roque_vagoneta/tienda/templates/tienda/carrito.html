@@ -10,8 +10,18 @@
   <div class="row featurette" style="padding-bottom: 80px;">
     <div class="col-md-12">
       <h2 class="featurette-heading" style="text-align:center;">TU CARRITO DE COMPRAS</h2>
-      <h3 style="text-align:center;">Podés agregarle mas unidades a los artículos que elegiste </h3>
+      <h3 style="text-align:center;">Podés agregarle mas unidades a los artículos que elegiste<br>
+      o volver a la tienda para agregar mas artículos</h3>
     </div>
+    {% if messages %}
+  <div class="container">
+    {% for msg in messages %}
+      <div class="alert alert-success" role="alert" style="text-align:center;">
+        {{msg}}
+      </div>  
+    {% endfor %}
+  </div>
+  {% endif %}
  </div>
  
   
