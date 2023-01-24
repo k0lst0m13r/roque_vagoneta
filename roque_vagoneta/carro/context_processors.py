@@ -8,3 +8,4 @@ def importe_total(request):
         total =  "Iniciá sesión para hacer tu pedido"
 
     return {"importe_total": total}
+
