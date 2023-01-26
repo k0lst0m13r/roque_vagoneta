@@ -1,19 +1,27 @@
 <!doctype html>
 
-<html lang="en">
+<html lang="es">
   <head>
     {% load static %}
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v4.0.1">
+    <meta name="keywords" content="Cotillon, Disfraces, Reposteria">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="Tienda de Cotillon, Disfraces y Reposteria">
+    <meta name="author" content="K0lst0m13rDevS">
+    <meta name="generator" content="django3.2">
+
+    <meta property="og:title" content="Roque Vagoneta Cotillon" />
+    <meta property="og:description" content="Cotillon, Disfraces, Reposteria y mas! Todo para tus fiestas" />
+    <meta property="og:url" content="https://roquevago" />
+    <meta property="og:image" content="https://roque_vagoneta/roque_vago_app/static/imagenes/rvlogo.png" />
+
     <title>{% block title %}{% endblock %}</title>
 
+    <link rel="icon" type="image/x-icon" href="{% static 'imagenes/favRV.ico' %}">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <!-- Bootstrap core CSS -->
-<link href="{% static 'roque_vago_app/assets/dist/css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'roque_vago_app/assets/dist/css/bootstrap.css' %}" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
