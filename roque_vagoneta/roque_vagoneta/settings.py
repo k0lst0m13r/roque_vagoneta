@@ -1,3 +1,4 @@
+from decouple import config
 """
 Django settings for roque_vagoneta project.
 
@@ -23,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-kc)+obqu6_c9rag54mf4+jfwz(df4b0f)*aoy5233!kut3(lf4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = [roquevagoneta.vercel.app]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -139,4 +140,4 @@ EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 EMAIL_PORT = "587"
 EMAIL_HOST_USER = "roquevagoweb@gmail.com"
-EMAIL_HOST_PASSWORD = "ydyogipdlcmneueq"
+EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD")
