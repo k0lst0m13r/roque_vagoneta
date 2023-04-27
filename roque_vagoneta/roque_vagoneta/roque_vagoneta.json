@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "roque_vagoneta/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "roque_vagoneta/wsgi.py"
+      }
+    ]
+  }
